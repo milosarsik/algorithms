@@ -43,6 +43,22 @@ Notes: [static_arrays.py](static_arrays.py)
 
 ### Dynamic Arrays
 
+Dynamic arrays grow as elements are added. Python lists are dynamic arrays, so unlike static arrays, you do not need to choose the final size up front.
+
+When a dynamic array runs out of capacity, it creates a new array with more space, usually double the old capacity, copies the existing elements over, and then inserts the new value. That resize step is `O(n)`, but it does not happen on every insertion. Because capacity doubles, adding to the end is `O(1)` amortized over many insertions.
+
+Inserting or removing from the middle still requires shifting elements, so those operations remain `O(n)`.
+
+| Operation | Time Complexity | Notes |
+| --- | --- | --- |
+| Read or write i-th element | O(1) | Direct index access |
+| Search for value | O(n) | May need to scan every element |
+| Insert at end | O(1) amortized | Resize is O(n), but not every insert resizes |
+| Remove from end | O(1) | No shifting needed |
+| Resize | O(n) | Copy elements into a larger array |
+| Insert in middle | O(n) | Elements must shift right |
+| Remove from middle | O(n) | Elements must shift left |
+
 Notes: [dynamic_arrays.py](dynamic_arrays.py)
 
 #### Suggested Problems
