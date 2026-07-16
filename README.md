@@ -8,6 +8,7 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
   - [Arrays](#arrays)
     - [Static Arrays](#static-arrays)
     - [Dynamic Arrays](#dynamic-arrays)
+  - [Stacks](#stacks)
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
 - [Completed Problems](#completed-problems)
@@ -66,6 +67,24 @@ Notes: [dynamic_arrays.py](dynamic_arrays.py)
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Array Construction | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | Return the array repeated twice |
+
+## Stacks
+
+A stack is a linear data structure where elements are added and removed from the same end, called the top of the stack. It follows `LIFO`: last in, first out.
+
+Stacks can be implemented with a dynamic array. In Python, a list works well because `append`, `pop`, and reading the last element are all efficient end-of-array operations.
+
+Common stack operations:
+
+| Operation | Time Complexity | Notes |
+| --- | --- | --- |
+| Push | O(1) | Add to the top of the stack |
+| Pop | O(1) | Remove from the top; check for empty stack first |
+| Peek / Top | O(1) | Read the top without removing it |
+
+Stacks are useful when you need to process items in reverse order, undo recent work, match pairs like parentheses, or keep track of nested state.
+
+Notes: [stacks.py](stacks.py)
 
 ## Patterns
 
