@@ -32,15 +32,15 @@ Static arrays have a fixed capacity. Python lists are dynamic arrays, but the sa
 | Insert in middle | O(n) | Elements must shift right |
 | Remove from middle | O(n) | Elements must shift left |
 
-Notes: [static_arrays.py](static_arrays.py)
+Notes: [static_arrays.py](notes/static_arrays.py)
 
 #### Suggested Problems
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
-| ✔️ | 🟢 Easy | Two Pointers | [27. Remove Element](https://leetcode.com/problems/remove-element/) | [27_remove_element.py](27_remove_element.py) | In-place array overwrite, two pointers |
-| ✔️ | 🟢 Easy | Sliding Window | [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) | Linear scan, counting streaks |
-| ✔️ | 🟢 Easy | Suffix Maximum | [1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | [1299_replace_elements.py](1299_replace_elements.py) | Brute force, suffix maximum |
+| ✔️ | 🟢 Easy | Two Pointers | [27. Remove Element](https://leetcode.com/problems/remove-element/) | [27_remove_element.py](problems/27_remove_element.py) | In-place array overwrite, two pointers |
+| ✔️ | 🟢 Easy | Sliding Window | [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | Linear scan, counting streaks |
+| ✔️ | 🟢 Easy | Suffix Maximum | [1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | [1299_replace_elements.py](problems/1299_replace_elements.py) | Brute force, suffix maximum |
 
 ### Dynamic Arrays
 
@@ -60,13 +60,13 @@ Inserting or removing from the middle still requires shifting elements, so those
 | Insert in middle | O(n) | Elements must shift right |
 | Remove from middle | O(n) | Elements must shift left |
 
-Notes: [dynamic_arrays.py](dynamic_arrays.py)
+Notes: [dynamic_arrays.py](notes/dynamic_arrays.py)
 
 #### Suggested Problems
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
-| ✔️ | 🟢 Easy | Array Construction | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | Return the array repeated twice |
+| ✔️ | 🟢 Easy | Array Construction | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | Return the array repeated twice |
 
 ## Stacks
 
@@ -95,15 +95,15 @@ Look for:
 - State tracking, undo/redo behavior, browser history, or backtracking recent actions.
 - Problems that only need access to the most recent item, not random access or searching.
 
-Notes: [stacks.py](stacks.py)
+Notes: [stacks.py](notes/stacks.py)
 
 #### Suggested Problems
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
-| ⬜ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](20_valid_parentheses.py) | Match opening and closing brackets |
-| ⬜ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](682_baseball_game.py) | Track previous scores |
-| ⬜ | 🟡 Medium | Stack | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](155_min_stack.py) | Track minimum while supporting stack operations |
+| ⬜ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | Match opening and closing brackets |
+| ⬜ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
+| ⬜ | 🟡 Medium | Stack | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
 
 ## Patterns
 
@@ -126,7 +126,7 @@ Look for:
 
 | # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On |
 | --- | :---: | --- | --- | --- | --- | --- | --- |
-| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](27_remove_element.py) | 2026-07-16 |
-| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) | 2026-07-16 |
-| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](1299_replace_elements.py) | 2026-07-16 |
-| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | 2026-07-16 |
+| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](problems/27_remove_element.py) | 2026-07-16 |
+| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 |
+| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 |
+| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 |
