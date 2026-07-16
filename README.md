@@ -72,7 +72,9 @@ Notes: [dynamic_arrays.py](dynamic_arrays.py)
 
 A stack is a linear data structure where elements are added and removed from the same end, called the top of the stack. It follows `LIFO`: last in, first out.
 
-Stacks can be implemented with a dynamic array. In Python, a list works well because `append`, `pop`, and reading the last element are all efficient end-of-array operations.
+Stacks can be implemented with an array or linked list. In Python, a list works well because `append`, `pop`, and reading the last element are all efficient end-of-array operations.
+
+If a stack has a fixed capacity, pushing onto a full stack causes stack overflow. Popping from an empty stack causes stack underflow. In Python, lists grow dynamically, but it is still good practice to check whether a stack is empty before popping or peeking.
 
 Common stack operations:
 
@@ -81,8 +83,17 @@ Common stack operations:
 | Push | O(1) | Add to the top of the stack |
 | Pop | O(1) | Remove from the top; check for empty stack first |
 | Peek / Top | O(1) | Read the top without removing it |
+| Is Empty | O(1) | Check whether the stack has no elements |
+| Size | O(1) | Track or return the number of elements |
 
-Stacks are useful when you need to process items in reverse order, undo recent work, match pairs like parentheses, or keep track of nested state.
+Stacks are useful when you need to process items in reverse order, undo recent work, match pairs like parentheses, evaluate expressions, or keep track of nested state.
+
+Look for:
+
+- Reverse order processing, where the last item added should be handled first.
+- Nested structures, such as parentheses, brackets, function calls, or expression parsing.
+- State tracking, undo/redo behavior, browser history, or backtracking recent actions.
+- Problems that only need access to the most recent item, not random access or searching.
 
 Notes: [stacks.py](stacks.py)
 
