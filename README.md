@@ -70,9 +70,9 @@ Look for:
 
 ## Completed Problems
 
-| # | Completed | Difficulty | Pattern | Problem | Topic | Solution |
-| --- | :---: | --- | --- | --- | --- | --- |
-| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](27_remove_element.py) |
-| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) |
-| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](1299_replace_elements.py) |
-| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) |
+| # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On |
+| --- | :---: | --- | --- | --- | --- | --- | --- |
+| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](27_remove_element.py) | 2026-07-16 |
+| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) | 2026-07-16 |
+| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](1299_replace_elements.py) | 2026-07-16 |
+| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | 2026-07-16 |
