@@ -97,6 +97,14 @@ Look for:
 
 Notes: [stacks.py](stacks.py)
 
+#### Suggested Problems
+
+| Completed | Difficulty | Pattern | Problem | Solution | Notes |
+| :---: | --- | --- | --- | --- | --- |
+| ⬜ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](20_valid_parentheses.py) | Match opening and closing brackets |
+| ⬜ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](682_baseball_game.py) | Track previous scores |
+| ⬜ | 🟡 Medium | Stack | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](155_min_stack.py) | Track minimum while supporting stack operations |
+
 ## Patterns
 
 ### Two Pointers
