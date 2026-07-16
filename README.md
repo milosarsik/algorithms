@@ -36,7 +36,7 @@ Notes: [static_arrays.py](static_arrays.py)
 #### Suggested Problems
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
-| --- | --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Two Pointers | [27. Remove Element](https://leetcode.com/problems/remove-element/) | [27_remove_element.py](27_remove_element.py) | In-place array overwrite, two pointers |
 | ✔️ | 🟢 Easy | Sliding Window | [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) | Linear scan, counting streaks |
 | ✔️ | 🟢 Easy | Suffix Maximum | [1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | [1299_replace_elements.py](1299_replace_elements.py) | Brute force, suffix maximum |
@@ -48,7 +48,7 @@ Notes: [dynamic_arrays.py](dynamic_arrays.py)
 #### Suggested Problems
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
-| --- | --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Array Construction | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | Return the array repeated twice |
 
 ## Patterns
@@ -71,7 +71,7 @@ Look for:
 ## Completed Problems
 
 | # | Completed | Difficulty | Pattern | Problem | Topic | Solution |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | --- | --- | --- | --- | --- |
 | 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](27_remove_element.py) |
 | 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](485_max_consecutive_ones.py) |
 | 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](1299_replace_elements.py) |
