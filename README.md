@@ -8,6 +8,8 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
   - [Arrays](#arrays)
     - [Static Arrays](#static-arrays)
     - [Dynamic Arrays](#dynamic-arrays)
+- [Patterns](#patterns)
+  - [Two Pointers](#two-pointers)
 - [Completed Problems](#completed-problems)
 
 ## Algorithms and Data Structures for Beginners
@@ -48,6 +50,23 @@ Notes: [dynamic_arrays.py](dynamic_arrays.py)
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | --- | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Array Construction | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [1929_concatenation_of_array.py](1929_concatenation_of_array.py) | Return the array repeated twice |
+
+## Patterns
+
+### Two Pointers
+
+Use two pointers when a problem asks you to process elements from two positions in a linear structure like an array, string, or linked list. The pointers may start at opposite ends, at different positions in the same structure, or across two related structures.
+
+This pattern is useful when pointer movement can be decided from the current values. For example, in a sorted array pair-sum problem, move the right pointer left when the sum is too large and move the left pointer right when the sum is too small. For palindrome checks or array reversal, move both pointers toward the middle.
+
+Two pointers often replaces nested loops with a single pass, improving time complexity from `O(n^2)` to `O(n)` while usually keeping space complexity at `O(1)`.
+
+Look for:
+
+- A linear data structure.
+- A need to compare, swap, remove, or combine values from two positions.
+- A sorted input, palindrome-style symmetry, in-place compaction, or pair/triplet search.
+- Pointer movement rules based on conditions in the problem.
 
 ## Completed Problems
 
