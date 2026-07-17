@@ -124,7 +124,7 @@ Notes: [stacks.py](notes/stacks.py)
 | :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | Match opening and closing brackets |
 | ✔️ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
-| ⬜ | 🟡 Medium | Stack | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
+| ✔️ | 🟡 Medium | Stack / Design | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
 
 ## Patterns
 
@@ -211,6 +211,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 |
 | 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 |
 | 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 |
+| 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 |
 
 ## Daily Problems
 
@@ -231,3 +232,5 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Trick | When To Use It | Example |
 | --- | --- | --- |
 | Maintain a running total | When a stack/list changes over time but the final answer is the sum of remaining values | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) |
+| Use an auxiliary minimum stack | When a stack needs to return the current minimum in O(1) | [155. Min Stack](https://leetcode.com/problems/min-stack/) |
+| Encode values as differences from the current minimum | When you want one stack to recover both values and previous minimums | [155. Min Stack](https://leetcode.com/problems/min-stack/) |
