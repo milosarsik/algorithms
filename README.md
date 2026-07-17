@@ -11,6 +11,7 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
   - [Stacks](#stacks)
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
+  - [Simulation](#simulation)
   - [Math](#math)
     - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
@@ -124,6 +125,19 @@ Look for:
 - A sorted input, palindrome-style symmetry, in-place compaction, or pair/triplet search.
 - Pointer movement rules based on conditions in the problem.
 
+### Simulation
+
+Use simulation when the problem gives a direct process to follow step by step. The solution usually keeps track of some state, applies each rule in order, and returns the final result after the process is complete.
+
+Simulation problems are often not about finding a hidden trick. The main job is to model the instructions cleanly, update state carefully, and avoid unnecessary extra work.
+
+Look for:
+
+- A problem statement that describes an exact sequence of operations.
+- State that changes over time, such as a running maximum, score, position, stack, queue, or list.
+- Instructions like build, process, sort, pair, remove, repeat, or ignore.
+- A result that comes from following the rules directly.
+
 ### Math
 
 #### Euclidean Algorithm
@@ -146,3 +160,4 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 |
 | 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 |
 | 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 |
+| 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 |
