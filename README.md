@@ -11,6 +11,8 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
   - [Stacks](#stacks)
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
+  - [Math](#math)
+    - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
 
 ## Algorithms and Data Structures for Beginners
@@ -122,6 +124,19 @@ Look for:
 - A sorted input, palindrome-style symmetry, in-place compaction, or pair/triplet search.
 - Pointer movement rules based on conditions in the problem.
 
+### Math
+
+#### Euclidean Algorithm
+
+Use the Euclidean algorithm to find the greatest common divisor, or `gcd`, of two numbers. The key idea is that `gcd(a, b) == gcd(b, a % b)`, and the recursion stops when the second number becomes `0`.
+
+```python
+def gcd(a, b):
+    return a if b == 0 else gcd(b, a % b)
+```
+
+For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbers sum to `n * (n + 1)`. Since `n` and `n + 1` are consecutive, their GCD is `1`, so the answer simplifies to `n`.
+
 ## Completed Problems
 
 | # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On |
@@ -130,3 +145,4 @@ Look for:
 | 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 |
 | 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 |
 | 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 |
+| 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 |
