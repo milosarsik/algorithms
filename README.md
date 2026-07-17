@@ -15,10 +15,13 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
   - [Counting](#counting)
     - [Inclusion-Exclusion](#inclusion-exclusion)
   - [Prefix Sum](#prefix-sum)
+  - [String Building](#string-building)
   - [Math](#math)
     - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
 - [Daily Problems](#daily-problems)
+- [Programming Skills Study Plan](#programming-skills-study-plan)
+  - [Basic Implementation](#basic-implementation)
 
 ## Algorithms and Data Structures for Beginners
 
@@ -160,6 +163,16 @@ Use prefix sums when you need fast cumulative counts or range totals. After coun
 
 For query problems, prefix sums often pair with binary search: find the first prefix count that passes the query index.
 
+### String Building
+
+Use string building when a problem asks you to construct a new string step by step. In Python, strings are immutable, so it is usually cleaner and more efficient to append characters to a list and call `"".join(...)` at the end instead of repeatedly concatenating strings in a loop.
+
+Look for:
+
+- A result string that is built one character or chunk at a time.
+- Alternating, merging, filtering, reversing, or formatting characters.
+- Problems where the output size is proportional to the input size.
+
 ### Math
 
 #### Euclidean Algorithm
@@ -184,9 +197,18 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 |
 | 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 |
 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 |
+| 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 |
 
 ## Daily Problems
 
 | Date | # | Completed | Difficulty | Pattern | Problem | Solution |
 | --- | --- | :---: | --- | --- | --- | --- |
 | 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) |
+
+## Programming Skills Study Plan
+
+### Basic Implementation
+
+| Completed | Difficulty | Pattern | Problem | Solution | Completed On |
+| :---: | --- | --- | --- | --- | --- |
+| ✔️ | 🟢 Easy | Two Pointers / String Building | [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 |
