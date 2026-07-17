@@ -4,6 +4,7 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
 
 ## Table of Contents
 
+- [Legend](#legend)
 - [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)
   - [Arrays](#arrays)
     - [Static Arrays](#static-arrays)
@@ -23,6 +24,15 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
 - [Programming Skills Study Plan](#programming-skills-study-plan)
   - [Basic Implementation](#basic-implementation)
 - [Tricks](#tricks)
+
+## Legend
+
+| Symbol | Meaning |
+| :---: | --- |
+| ✔️ | Solved independently |
+| 🟡 | Solved with hints or partial help |
+| ❌ | Reviewed solution / did not solve |
+| ⬜ | Not started |
 
 ## Algorithms and Data Structures for Beginners
 
