@@ -22,6 +22,7 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
 - [Daily Problems](#daily-problems)
 - [Programming Skills Study Plan](#programming-skills-study-plan)
   - [Basic Implementation](#basic-implementation)
+- [Tricks](#tricks)
 
 ## Algorithms and Data Structures for Beginners
 
@@ -112,7 +113,7 @@ Notes: [stacks.py](notes/stacks.py)
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | Match opening and closing brackets |
-| ⬜ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
+| ✔️ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
 | ⬜ | 🟡 Medium | Stack | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
 
 ## Patterns
@@ -199,6 +200,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 |
 | 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 |
 | 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 |
+| 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 |
 
 ## Daily Problems
 
@@ -213,3 +215,9 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Completed | Difficulty | Pattern | Problem | Solution | Completed On |
 | :---: | --- | --- | --- | --- | --- |
 | ✔️ | 🟢 Easy | Two Pointers / String Building | [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 |
+
+## Tricks
+
+| Trick | When To Use It | Example |
+| --- | --- | --- |
+| Maintain a running total | When a stack/list changes over time but the final answer is the sum of remaining values | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) |
