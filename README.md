@@ -12,9 +12,13 @@ This repository is for tracking data structures, algorithms, notes, and LeetCode
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
   - [Simulation](#simulation)
+  - [Counting](#counting)
+    - [Inclusion-Exclusion](#inclusion-exclusion)
+  - [Prefix Sum](#prefix-sum)
   - [Math](#math)
     - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
+- [Daily Problems](#daily-problems)
 
 ## Algorithms and Data Structures for Beginners
 
@@ -138,6 +142,24 @@ Look for:
 - Instructions like build, process, sort, pair, remove, repeat, or ignore.
 - A result that comes from following the rules directly.
 
+### Counting
+
+Use counting when the direct approach would build too many values, but the problem only needs to know how many times each value or category appears.
+
+For 3312, building every GCD pair is too slow because there are `O(n^2)` pairs. Instead, count how many pairs have each possible GCD value.
+
+#### Inclusion-Exclusion
+
+Inclusion-exclusion removes over-counting. For GCD problems, if we count all pairs where both numbers are divisible by `g`, that includes pairs whose exact GCD is `g`, but also pairs whose exact GCD is `2g`, `3g`, and other multiples.
+
+To fix this, calculate exact GCD counts from large to small. When processing `g`, subtract the already-known counts for larger multiples of `g`.
+
+### Prefix Sum
+
+Use prefix sums when you need fast cumulative counts or range totals. After counting how many pairs have each GCD value, a prefix sum lets us know how many sorted GCD pairs are `<= g`.
+
+For query problems, prefix sums often pair with binary search: find the first prefix count that passes the query index.
+
 ### Math
 
 #### Euclidean Algorithm
@@ -161,3 +183,10 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 |
 | 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 |
 | 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 |
+| 3312 | ✔️ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 |
+
+## Daily Problems
+
+| Date | # | Completed | Difficulty | Pattern | Problem | Solution |
+| --- | --- | :---: | --- | --- | --- | --- |
+| 2026-07-17 | 3312 | ✔️ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) |
