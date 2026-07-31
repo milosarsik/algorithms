@@ -2,8 +2,65 @@
 
 This repository is for tracking data structures, algorithms, notes, and LeetCode solutions as I work through them.
 
+## DSA Plan
+
+Use the resources hierarchically:
+
+| Resource | Role |
+| --- | --- |
+| NeetCode | Syllabus and problem selection |
+| LeetCode | Implementation environment |
+| Grokking Patterns | Explanation when a pattern is unclear |
+| EPI Python | Selected deeper explanations and additional drills |
+
+Do not study all four independently.
+
+### Eight-Week Sequence
+
+1. Arrays and hashing
+2. Two pointers and sliding window
+3. Stacks, queues, and binary search
+4. Linked lists and trees
+5. BFS, DFS, and heaps
+6. Graphs, intervals, topological sort, union-find
+7. Backtracking and basic dynamic programming
+8. Mixed timed assessments
+
+### Weekly Targets
+
+- 6-8 new problems
+- 4 repeated problems
+- One 90-minute timed assessment
+- One mistake-review session
+
+### Problem Protocol
+
+For each problem:
+
+1. Explain the brute-force approach.
+2. Identify the likely pattern.
+3. Attempt independently for approximately 25-30 minutes.
+4. Take a small hint if completely blocked.
+5. Study the solution only after a real attempt.
+6. Close it and reproduce it without looking.
+7. Repeat it after approximately 3 days and again after 1-2 weeks.
+
+Record:
+
+- Pattern
+- Recognition failure
+- Reasoning failure
+- Python/API mistake
+- Time complexity
+- Cue you should recognize next time
+- Repeat date
+
 ## Table of Contents
 
+- [DSA Plan](#dsa-plan)
+  - [Eight-Week Sequence](#eight-week-sequence)
+  - [Weekly Targets](#weekly-targets)
+  - [Problem Protocol](#problem-protocol)
 - [Legend](#legend)
 - [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)
   - [Arrays](#arrays)
