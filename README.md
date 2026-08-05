@@ -74,6 +74,7 @@ Record:
     - [Inclusion-Exclusion](#inclusion-exclusion)
   - [Prefix Sum](#prefix-sum)
   - [String Building](#string-building)
+  - [Graph Traversal](#graph-traversal)
   - [Math](#math)
     - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
@@ -241,6 +242,19 @@ Look for:
 - Alternating, merging, filtering, reversing, or formatting characters.
 - Problems where the output size is proportional to the input size.
 
+### Graph Traversal
+
+Use graph traversal when values are connected by relationships and the answer depends on what can be reached from a starting point. Build an adjacency list, then use DFS or BFS to visit reachable nodes.
+
+DFS is often a good fit when you need to mark everything connected to one source, such as all methods reachable from a buggy method. For directed graphs, be careful with edge direction: if `a` invokes `b`, the traversal edge is `a -> b`.
+
+Look for:
+
+- Nodes and edges, dependencies, calls, prerequisites, routes, or relationships.
+- Language like reachable, connected, direct or indirect, invokes, depends on, or visits.
+- A starting node where everything reachable from it must be marked.
+- A need to check whether an outside node points into a marked group.
+
 ### Math
 
 #### Euclidean Algorithm
@@ -280,6 +294,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - |
 | 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - |
 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High |
+| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review |
 
 ## Daily Problems
 
@@ -287,6 +302,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | --- | --- | :---: | --- | --- | --- | --- | --- |
 | 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - |
 | 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High |
+| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review |
 
 ## Programming Skills Study Plan
 
@@ -305,3 +321,4 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Encode values as differences from the current minimum | When you want one stack to recover both values and previous minimums | [155. Min Stack](https://leetcode.com/problems/min-stack/) |
 | Use only the requested extremes | When the problem asks about the smallest and largest values, avoid doing work across every value or pair | [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) |
 | Use `math.gcd` | When a problem needs the greatest common divisor and the custom Euclidean algorithm is not required | [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) |
+| Check outside-to-inside edges | When removing a marked group from a graph, verify no unmarked node points into that group | [3310. Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) |
