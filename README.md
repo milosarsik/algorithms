@@ -45,6 +45,12 @@ For each problem:
 6. Close it and reproduce it without looking.
 7. Repeat it after approximately 3 days and again after 1-2 weeks.
 
+For spaced repetition, use this cadence:
+
+- Failed or low-confidence problem: review after 1 day, then 3 days, 7 days, 14 days, and 30 days.
+- Solved but shaky problem: review after 3 days, then 7 days, 14 days, and 30 days.
+- Easy/high-confidence problem: review after 7-14 days, then 30 days.
+
 Record:
 
 - Pattern
@@ -280,29 +286,29 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 
 ## Completed Problems
 
-| # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On | Confidence |
-| --- | :---: | --- | --- | --- | --- | --- | --- | --- |
-| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](problems/27_remove_element.py) | 2026-07-16 | - |
-| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 | - |
-| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 | - |
-| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 | - |
-| 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 | - |
-| 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 | - |
-| 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 | - |
-| 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 | - |
-| 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 | - |
-| 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - |
-| 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - |
-| 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High |
-| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review |
+| # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On | Confidence | Next Review | Reviews |
+| --- | :---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](problems/27_remove_element.py) | 2026-07-16 | - | - | - |
+| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 | - | - | - |
+| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 | - | - | - |
+| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 | - | - | - |
+| 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 | - | - | - |
+| 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 | - | - | - |
+| 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 | - | - | - |
+| 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 | - | - | - |
+| 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 | - | - | - |
+| 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - | - | - |
+| 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - | - | - |
+| 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High | - | - |
+| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-06 | 0 |
 
 ## Daily Problems
 
-| Date | # | Completed | Difficulty | Pattern | Problem | Solution | Confidence |
-| --- | --- | :---: | --- | --- | --- | --- | --- |
-| 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - |
-| 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High |
-| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review |
+| Date | # | Completed | Difficulty | Pattern | Problem | Solution | Confidence | Next Review | Reviews |
+| --- | --- | :---: | --- | --- | --- | --- | --- | --- | --- |
+| 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - | - | - |
+| 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High | - | - |
+| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review | 2026-08-06 | 0 |
 
 ## Programming Skills Study Plan
 
