@@ -20,6 +20,13 @@
 # 4. A valid answer appears within at most 10 checks because any number with a
 #    0 digit has digit product 0, and 0 is divisible by t.
 #
+# Why check only n through n + 9?
+# In any 10 consecutive numbers, one number ends in 0.
+# Example: from 23 to 32, the number 30 appears.
+# Example: from 101 to 110, the number 110 appears.
+# A number that contains digit 0 has digit product 0.
+# Since 0 % t == 0 for any positive t, that number always works.
+#
 # Complexity note:
 # The search checks at most 10 candidates. Each digit-product calculation takes
 # O(d), where d is the number of digits in the candidate. With this problem's
@@ -32,9 +39,19 @@ import math
 # Because n <= 100, this is effectively O(1).
 # Space Complexity: O(d), because str(candidate) creates digit characters.
 def smallest_number_math_prod(n, t):
+    # This is still brute force / enumeration.
+    # The only "Python trick" is converting the number to a string so we can
+    # loop over its digits directly.
     for candidate in range(n, n + 10):
+        # Example:
+        # candidate = 123
+        # str(candidate) -> "123"
+        # int(digit) for digit in "123" -> 1, 2, 3
+        # math.prod(...) -> 1 * 2 * 3 -> 6
         product = math.prod(int(digit) for digit in str(candidate))
 
+        # product % t == 0 means product is divisible by t.
+        # "not product % t" is the same check, but this is clearer.
         if product % t == 0:
             return candidate
 
@@ -45,10 +62,18 @@ def smallest_number_math_prod(n, t):
 def smallest_number_manual_digits(n, t):
     for candidate in range(n, n + 10):
         product = 1
+
+        # Use a copy so we can destroy num while keeping candidate available
+        # to return at the end.
         num = candidate
 
         while num > 0:
+            # num % 10 gives the last digit.
+            # Example: 123 % 10 == 3
             product *= num % 10
+
+            # num //= 10 removes the last digit.
+            # Example: 123 // 10 == 12
             num //= 10
 
         if product % t == 0:
@@ -59,6 +84,10 @@ def smallest_number_manual_digits(n, t):
 # Because n <= 100, this is effectively O(1).
 # Space Complexity: O(d), because str(candidate) creates digit characters.
 def smallest_number_one_liner(n, t):
+    # Same logic as smallest_number_math_prod, compressed with next(...).
+    # Read it as:
+    # "Return the first candidate in range(n, n + 10) whose digit product is
+    # divisible by t."
     return next(
         candidate
         for candidate in range(n, n + 10)
@@ -70,6 +99,9 @@ def smallest_number_one_liner(n, t):
 # Because n <= 100, this is effectively O(1).
 # Space Complexity: O(1).
 def smallest_number_with_helper(n, t):
+    # This is probably the cleanest interview version:
+    # - the main function says "search candidates"
+    # - the helper says "compute digit product"
     def digit_product(num):
         product = 1
 
