@@ -300,7 +300,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - | - | - |
 | 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - | - | - |
 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High | - | - |
-| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-06 | 0 |
+| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-09 | 1 |
 
 ## Daily Problems
 
@@ -308,7 +308,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | --- | --- | :---: | --- | --- | --- | --- | --- | --- | --- |
 | 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - | - | - |
 | 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High | - | - |
-| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review | 2026-08-06 | 0 |
+| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review | 2026-08-09 | 1 |
 
 ## Programming Skills Study Plan
 
