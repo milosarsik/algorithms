@@ -73,8 +73,11 @@ Record:
     - [Static Arrays](#static-arrays)
     - [Dynamic Arrays](#dynamic-arrays)
   - [Stacks](#stacks)
+  - [Linked Lists](#linked-lists)
+    - [Singly Linked Lists](#singly-linked-lists)
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
+  - [In-Place Linked List Manipulation](#in-place-linked-list-manipulation)
   - [Simulation](#simulation)
   - [Counting](#counting)
     - [Inclusion-Exclusion](#inclusion-exclusion)
@@ -191,6 +194,38 @@ Notes: [stacks.py](notes/stacks.py)
 | ✔️ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
 | ✔️ | 🟡 Medium | Stack / Design | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
 
+## Linked Lists
+
+Linked lists store values in nodes. Each node has a value and a pointer to the next node. Unlike arrays, nodes do not need to be next to each other in memory, so linked lists are good for pointer-based insertions and deletions when you already have the relevant node reference.
+
+The tradeoff is that linked lists do not support direct index access. To find a value or reach a position, you usually start at the head and follow `next` pointers one node at a time.
+
+### Singly Linked Lists
+
+A singly linked list moves in one direction from `head` to `tail`. The final node points to `None`. If a node points back to an earlier node, the list has a cycle and normal traversal can loop forever.
+
+| Operation | Time Complexity | Notes |
+| --- | --- | --- |
+| Access by index | O(n) | Must traverse from the head |
+| Search | O(n) | May need to inspect every node |
+| Insert after known node | O(1) | Rewire one or two pointers |
+| Delete after known node | O(1) | Skip over the removed node |
+| Append with tail pointer | O(1) | Link the new node and update tail |
+| Append without tail pointer | O(n) | Must traverse to the end first |
+
+For in-place linked list problems, the key move is usually pointer rewiring. For example, reversing a list uses `previous`, `current`, and `next_node` so you can reverse each `next` pointer without losing the rest of the list.
+
+The notes file also includes a simple `LinkedList` class with a dummy head node and tail pointer. The dummy head makes removing index `0` behave like removing any other index, and the tail pointer makes appending to the end `O(1)`.
+
+Notes: [singly_linked_lists.py](notes/singly_linked_lists.py)
+
+#### Suggested Problems
+
+| Completed | Difficulty | Pattern | Problem | Solution | Notes |
+| :---: | --- | --- | --- | --- | --- |
+| ⬜ | 🟢 Easy | In-Place Linked List Manipulation | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | - | Reverse pointers with previous/current/next |
+| ⬜ | 🟢 Easy | Linked List Merge / Two Pointers | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | - | Build merged order by relinking nodes |
+
 ## Patterns
 
 ### Two Pointers
@@ -207,6 +242,30 @@ Look for:
 - A need to compare, swap, remove, or combine values from two positions.
 - A sorted input, palindrome-style symmetry, in-place compaction, or pair/triplet search.
 - Pointer movement rules based on conditions in the problem.
+
+### In-Place Linked List Manipulation
+
+Use in-place linked list manipulation when the input is a linked list and the task asks you to change node order or structure without creating a new list. Instead of copying nodes, rewire existing `next` pointers.
+
+The classic reversal pattern tracks three nodes:
+
+```python
+previous = None
+current = head
+
+while current:
+    next_node = current.next
+    current.next = previous
+    previous = current
+    current = next_node
+```
+
+Look for:
+
+- A linked list input.
+- Requirements like reverse, rotate, reorder, remove, swap, partition, or merge.
+- A need to modify links rather than only read values.
+- Space constraints asking for `O(1)` extra memory.
 
 ### Simulation
 
