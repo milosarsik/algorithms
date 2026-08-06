@@ -19,6 +19,11 @@
 # 3. If the digit product is divisible by t, return the candidate number.
 # 4. A valid answer appears within at most 10 checks because any number with a
 #    0 digit has digit product 0, and 0 is divisible by t.
+#
+# Complexity note:
+# The search checks at most 10 candidates. Each digit-product calculation takes
+# O(d), where d is the number of digits in the candidate. With this problem's
+# constraints, that is effectively constant time.
 
 import math
 
@@ -50,11 +55,48 @@ def smallest_number_manual_digits(n, t):
             return candidate
 
 
+# Time Complexity: O(10 * d), where d is the number of digits in n.
+# Because n <= 100, this is effectively O(1).
+# Space Complexity: O(d), because str(candidate) creates digit characters.
+def smallest_number_one_liner(n, t):
+    return next(
+        candidate
+        for candidate in range(n, n + 10)
+        if math.prod(int(digit) for digit in str(candidate)) % t == 0
+    )
+
+
+# Time Complexity: O(10 * d), where d is the number of digits in n.
+# Because n <= 100, this is effectively O(1).
+# Space Complexity: O(1).
+def smallest_number_with_helper(n, t):
+    def digit_product(num):
+        product = 1
+
+        while num > 0:
+            product *= num % 10
+            num //= 10
+
+        return product
+
+    return next(
+        candidate
+        for candidate in range(n, n + 10)
+        if digit_product(candidate) % t == 0
+    )
+
+
 print(smallest_number_math_prod(10, 2))  # 10
 print(smallest_number_manual_digits(10, 2))  # 10
+print(smallest_number_one_liner(10, 2))  # 10
+print(smallest_number_with_helper(10, 2))  # 10
 
 print(smallest_number_math_prod(15, 3))  # 16
 print(smallest_number_manual_digits(15, 3))  # 16
+print(smallest_number_one_liner(15, 3))  # 16
+print(smallest_number_with_helper(15, 3))  # 16
 
 print(smallest_number_math_prod(23, 6))  # 23
 print(smallest_number_manual_digits(23, 6))  # 23
+print(smallest_number_one_liner(23, 6))  # 23
+print(smallest_number_with_helper(23, 6))  # 23
