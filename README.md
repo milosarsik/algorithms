@@ -223,7 +223,7 @@ Notes: [singly_linked_lists.py](notes/singly_linked_lists.py)
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
-| ⬜ | 🟢 Easy | In-Place Linked List Manipulation | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | - | Reverse pointers with previous/current/next |
+| 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | Reverse pointers with previous/current/next |
 | ⬜ | 🟢 Easy | Linked List Merge / Two Pointers | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | - | Build merged order by relinking nodes |
 
 ## Patterns
@@ -373,6 +373,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High | - | - |
 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-09 | 1 |
 | 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | Math / Enumeration | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
+| 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
 
 ## Daily Problems
 
@@ -403,3 +404,4 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Check outside-to-inside edges | When removing a marked group from a graph, verify no unmarked node points into that group | [3310. Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) |
 | Use `math.prod` | When a problem needs the product of generated values, such as digits from a number | [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
 | Extract digits with modulo/division | When you want O(1) extra space digit processing without converting to a string | [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
+| Save `next_node` before rewiring | When reversing a linked list, store the next node before changing `current.next` | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) |
