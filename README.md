@@ -51,6 +51,46 @@ For spaced repetition, use this cadence:
 - Solved but shaky problem: review after 3 days, then 7 days, 14 days, and 30 days.
 - Easy/high-confidence problem: review after 7-14 days, then 30 days.
 
+### Review Protocol
+
+For DSA reviews:
+
+1. Blank attempt first.
+
+Open a blank editor or notebook. Do not open the saved solution yet. Write:
+
+- Problem goal
+- Input/output
+- Pattern
+- Brute-force idea
+- Optimized idea
+- Time/space complexity
+
+2. Try code from memory for 10-15 minutes.
+
+If stuck, do not immediately read the full solution. First write the missing step in English:
+
+- "I need to save the next node before rewiring."
+- "I need a dummy node so first insertion is not special."
+- "I need DFS from the suspicious method."
+
+3. Use tiny hints.
+
+Look only at the README pattern note or attempt notes first. Then check the algorithm-in-English comments. Only open the full code if still stuck.
+
+4. Close the solution and reproduce.
+
+After checking, close the solution and rewrite the whole solution once without looking. This is the part that actually locks it in.
+
+5. Record the failure mode.
+
+Write one sentence:
+
+- "Forgot pointer update order."
+- "Forgot to clear forward history."
+- "Recognized linked list but forgot dummy node."
+- "Could not identify DFS reachability."
+
 Record:
 
 - Pattern
@@ -67,6 +107,7 @@ Record:
   - [Eight-Week Sequence](#eight-week-sequence)
   - [Weekly Targets](#weekly-targets)
   - [Problem Protocol](#problem-protocol)
+  - [Review Protocol](#review-protocol)
 - [Legend](#legend)
 - [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)
   - [Arrays](#arrays)
