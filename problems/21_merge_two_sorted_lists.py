@@ -84,7 +84,7 @@ def merge_two_lists_my_attempt(list1, list2):
     return dummy.next
 
 
-# Optimized / Cleaned Up
+# NeetCode Iterative / Optimized
 # Time Complexity: O(m + n)
 # Space Complexity: O(1)
 def merge_two_lists_iterative(list1, list2):
@@ -92,7 +92,9 @@ def merge_two_lists_iterative(list1, list2):
     current = dummy
 
     while list1 and list2:
-        if list1.val <= list2.val:
+        # Using < matches NeetCode's version. <= also works, but it takes
+        # equal values from list1 first instead of list2 first.
+        if list1.val < list2.val:
             current.next = list1
             list1 = list1.next
         else:
@@ -101,11 +103,12 @@ def merge_two_lists_iterative(list1, list2):
 
         current = current.next
 
-    current.next = list1 if list1 else list2
+    current.next = list1 or list2
 
     return dummy.next
 
 
+# NeetCode Recursive
 # Time Complexity: O(m + n)
 # Space Complexity: O(m + n), because recursion uses the call stack.
 def merge_two_lists_recursive(list1, list2):
