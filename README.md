@@ -78,6 +78,7 @@ Record:
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
   - [In-Place Linked List Manipulation](#in-place-linked-list-manipulation)
+  - [Linked List Merge](#linked-list-merge)
   - [Simulation](#simulation)
   - [Counting](#counting)
     - [Inclusion-Exclusion](#inclusion-exclusion)
@@ -224,7 +225,7 @@ Notes: [singly_linked_lists.py](notes/singly_linked_lists.py)
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | Reverse pointers with previous/current/next |
-| ⬜ | 🟢 Easy | Linked List Merge / Two Pointers | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | - | Build merged order by relinking nodes |
+| ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | Build merged order by relinking nodes |
 
 ## Patterns
 
@@ -266,6 +267,19 @@ Look for:
 - Requirements like reverse, rotate, reorder, remove, swap, partition, or merge.
 - A need to modify links rather than only read values.
 - Space constraints asking for `O(1)` extra memory.
+
+### Linked List Merge
+
+Use linked list merge when two sorted linked lists need to become one sorted list. Keep a `current` pointer at the tail of the merged list, repeatedly attach the smaller current node, and advance only the list that provided that node.
+
+A dummy node keeps the code simple because every append looks the same, including the first real node. It also means empty lists are handled naturally: after the main loop, attach whichever list remains with `current.next = list1 if list1 else list2`.
+
+Look for:
+
+- Two sorted linked lists.
+- A need to preserve sorted order.
+- A result list built by relinking existing nodes.
+- Edge cases where either input list may be empty.
 
 ### Simulation
 
@@ -374,6 +388,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-09 | 1 |
 | 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | Math / Enumeration | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
 | 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
+| 21 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List / Recursion | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | 2026-08-07 | Needs Review | 2026-08-10 | 0 |
 
 ## Daily Problems
 
@@ -405,3 +420,4 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Use `math.prod` | When a problem needs the product of generated values, such as digits from a number | [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
 | Extract digits with modulo/division | When you want O(1) extra space digit processing without converting to a string | [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
 | Save `next_node` before rewiring | When reversing a linked list, store the next node before changing `current.next` | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) |
+| Use a dummy node | When building or relinking a linked list and the first node would otherwise need special handling | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) |
