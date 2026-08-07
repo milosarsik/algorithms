@@ -75,6 +75,7 @@ Record:
   - [Stacks](#stacks)
   - [Linked Lists](#linked-lists)
     - [Singly Linked Lists](#singly-linked-lists)
+    - [Doubly Linked Lists](#doubly-linked-lists)
 - [Patterns](#patterns)
   - [Two Pointers](#two-pointers)
   - [In-Place Linked List Manipulation](#in-place-linked-list-manipulation)
@@ -226,6 +227,33 @@ Notes: [singly_linked_lists.py](notes/singly_linked_lists.py)
 | :---: | --- | --- | --- | --- | --- |
 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | Reverse pointers with previous/current/next |
 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | Build merged order by relinking nodes |
+
+### Doubly Linked Lists
+
+A doubly linked list is a linked list where each node points both forward and backward with `next` and `prev`. This makes it possible to traverse in both directions and makes end operations cleaner when the list keeps a tail pointer.
+
+You do not strictly need dummy nodes, but dummy `head` and `tail` nodes are worth using in many implementation problems. They remove awkward edge cases because every real node is always between two nodes, even when the list is empty or has one value.
+
+| Operation | Time Complexity | Notes |
+| --- | --- | --- |
+| Access by index | O(n) | Must traverse from the head or tail |
+| Search | O(n) | May need to inspect every node |
+| Insert at front | O(1) | Rewire dummy head, first node, and new node |
+| Insert at end | O(1) | Rewire dummy tail, last node, and new node |
+| Remove from front | O(1) | Check for empty list first |
+| Remove from end | O(1) | Check for empty list first |
+| Insert/delete after known node | O(1) | Assuming you already have the node reference |
+
+Common mistakes are forgetting to update both directions of a link, losing the old first or last node before rewiring, and not handling an empty list before removal.
+
+Notes: [doubly_linked_lists.py](notes/doubly_linked_lists.py)
+
+#### Suggested Problems
+
+| Completed | Difficulty | Pattern | Problem | Solution | Notes |
+| :---: | --- | --- | --- | --- | --- |
+| ⬜ | 🟡 Medium | Doubly Linked List / Design | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) | - | Implement indexed get, insert, and delete operations |
+| ⬜ | 🟡 Medium | Doubly Linked List / Design | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) | - | Move backward and forward through history state |
 
 ## Patterns
 
@@ -421,3 +449,4 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Extract digits with modulo/division | When you want O(1) extra space digit processing without converting to a string | [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
 | Save `next_node` before rewiring | When reversing a linked list, store the next node before changing `current.next` | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) |
 | Use a dummy node | When building or relinking a linked list and the first node would otherwise need special handling | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) |
+| Use dummy head and tail nodes | When a linked list design problem needs clean front/end insertions and removals without special-casing empty or one-node lists | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
