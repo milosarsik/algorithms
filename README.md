@@ -109,11 +109,13 @@ Record:
   - [Problem Protocol](#problem-protocol)
   - [Review Protocol](#review-protocol)
 - [Legend](#legend)
+- [DSA From Scratch](#dsa-from-scratch)
 - [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)
   - [Arrays](#arrays)
     - [Static Arrays](#static-arrays)
     - [Dynamic Arrays](#dynamic-arrays)
   - [Stacks](#stacks)
+  - [Queues](#queues)
   - [Linked Lists](#linked-lists)
     - [Singly Linked Lists](#singly-linked-lists)
     - [Doubly Linked Lists](#doubly-linked-lists)
@@ -144,6 +146,19 @@ Record:
 | 🟡 | Solved with hints or partial help |
 | ❌ | Reviewed solution / did not solve |
 | ⬜ | Not started |
+
+## DSA From Scratch
+
+Use this as a review checklist for data structures that should eventually be writable from memory.
+
+| Data Structure | Scratch Implementation | Practice Source | Key Operations |
+| --- | --- | --- | --- |
+| Static Array | [static_arrays.py](notes/static_arrays.py) | [27. Remove Element](https://leetcode.com/problems/remove-element/) | Read, write, search, insert/remove with shifting |
+| Dynamic Array | [dynamic_arrays.py](notes/dynamic_arrays.py) | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Push, resize, amortized insertion |
+| Stack | [stacks.py](notes/stacks.py) | [155. Min Stack](https://leetcode.com/problems/min-stack/) | Push, pop, peek/top, min tracking |
+| Queue | [queues.py](notes/queues.py) | [queues.py](notes/queues.py) | Enqueue, dequeue, reset tail when empty |
+| Singly Linked List | [singly_linked_lists.py](notes/singly_linked_lists.py) | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) | Insert, delete, traverse, reverse |
+| Doubly Linked List | [doubly_linked_lists.py](notes/doubly_linked_lists.py) | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) | Insert/remove front and end, move prev/next |
 
 ## Algorithms and Data Structures for Beginners
 
@@ -236,6 +251,29 @@ Notes: [stacks.py](notes/stacks.py)
 | ✔️ | 🟢 Easy | Stack | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | Match opening and closing brackets |
 | ✔️ | 🟢 Easy | Stack | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | [682_baseball_game.py](problems/682_baseball_game.py) | Track previous scores |
 | ✔️ | 🟡 Medium | Stack / Design | [155. Min Stack](https://leetcode.com/problems/min-stack/) | [155_min_stack.py](problems/155_min_stack.py) | Track minimum while supporting stack operations |
+
+## Queues
+
+A queue is a linear data structure that follows `FIFO`: first in, first out. The first value added is the first value removed, like the first person in line being served first.
+
+The two core operations are `enqueue` and `dequeue`. `enqueue` adds to the back of the queue, and `dequeue` removes from the front. With a linked-list implementation that tracks both ends, both operations run in `O(1)` time.
+
+Queues can also be built with arrays, but matching linked-list performance requires a circular array so removals from the front do not force shifting every element.
+
+A deque, pronounced "deck", is a double-ended queue. It supports adding and removing from both ends in `O(1)` time.
+
+Queues are especially important for breadth-first search in trees and graphs because BFS processes nodes in the order they are discovered.
+
+| Operation | Time Complexity | Notes |
+| --- | --- | --- |
+| Enqueue | O(1) | Add to the back/right |
+| Dequeue | O(1) | Remove from the front/left; check for empty queue first |
+| Peek / Front | O(1) | Read the front value without removing it |
+| Is Empty | O(1) | Check whether the queue has no elements |
+
+Common mistakes are forgetting to handle an empty queue before dequeue, and forgetting to reset the back pointer when the final node is removed.
+
+Notes: [queues.py](notes/queues.py)
 
 ## Linked Lists
 
@@ -494,3 +532,5 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Use dummy head and tail nodes | When a linked list design problem needs clean front/end insertions and removals without special-casing empty or one-node lists | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
 | Stop before the target node | For linked-list insert/delete, traverse to the node before the target so you can rewire `previous.next` | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
 | Separate indices from insertion positions | Existing nodes are `0..size - 1`, but valid insertion positions are `0..size` | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
+| Track both ends of a queue | Keep `left` for dequeue and `right` for enqueue so both operations stay O(1) | [queues.py](notes/queues.py) |
+| Reset queue tail when empty | After dequeue removes the last node, set both `left` and `right` to `None` | [queues.py](notes/queues.py) |
