@@ -293,7 +293,7 @@ Notes: [doubly_linked_lists.py](notes/doubly_linked_lists.py)
 
 | Completed | Difficulty | Pattern | Problem | Solution | Notes |
 | :---: | --- | --- | --- | --- | --- |
-| ⬜ | 🟡 Medium | Doubly Linked List / Design | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) | - | Implement indexed get, insert, and delete operations |
+| ❌ | 🟡 Medium | Linked List / Design | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) | [707_design_linked_list.py](problems/707_design_linked_list.py) | Implement indexed get, insert, and delete operations |
 | ⬜ | 🟡 Medium | Doubly Linked List / Design | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) | - | Move backward and forward through history state |
 
 ## Patterns
@@ -458,6 +458,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | Math / Enumeration | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
 | 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
 | 21 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List / Recursion | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | 2026-08-07 | Needs Review | 2026-08-10 | 0 |
+| 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | 2026-08-11 | 0 |
 
 ## Daily Problems
 
@@ -491,3 +492,5 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | Save `next_node` before rewiring | When reversing a linked list, store the next node before changing `current.next` | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) |
 | Use a dummy node | When building or relinking a linked list and the first node would otherwise need special handling | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) |
 | Use dummy head and tail nodes | When a linked list design problem needs clean front/end insertions and removals without special-casing empty or one-node lists | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
+| Stop before the target node | For linked-list insert/delete, traverse to the node before the target so you can rewire `previous.next` | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
+| Separate indices from insertion positions | Existing nodes are `0..size - 1`, but valid insertion positions are `0..size` | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) |
