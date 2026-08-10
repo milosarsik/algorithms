@@ -275,6 +275,13 @@ Common mistakes are forgetting to handle an empty queue before dequeue, and forg
 
 Notes: [queues.py](notes/queues.py)
 
+#### Suggested Problems
+
+| Completed | Difficulty | Pattern | Problem | Solution | Notes |
+| :---: | --- | --- | --- | --- | --- |
+| ❌ | 🟢 Easy | Queue / Simulation / Counting | [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | - | Re-attempt after realizing first approach was off |
+| ⬜ | 🟢 Easy | Queue / Stack / Design | [225. Implement Stack Using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | - | Use queue operations to simulate stack behavior |
+
 ## Linked Lists
 
 Linked lists store values in nodes. Each node has a value and a pointer to the next node. Unlike arrays, nodes do not need to be next to each other in memory, so linked lists are good for pointer-based insertions and deletions when you already have the relevant node reference.
@@ -497,6 +504,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
 | 21 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List / Recursion | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | 2026-08-07 | Needs Review | 2026-08-10 | 0 |
 | 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | 2026-08-11 | 0 |
+| 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | 2026-08-11 | 0 |
 
 ## Daily Problems
 
