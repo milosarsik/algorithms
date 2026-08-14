@@ -101,6 +101,27 @@ Record:
 - Cue you should recognize next time
 - Repeat date
 
+### Foundation Reset Review
+
+Starting after the wedding on 2026-08-17, restart the Algorithms and Data Structures for Beginners material from lesson zero and review every completed problem in chronological order. This is a diagnostic pass, not a full erase-and-rewatch reset.
+
+- Work from a blank editor before opening notes or the saved solution.
+- Review two problems per weekday.
+- If the solution is correct, explainable, and within a reasonable time, record the result and return it to the normal spaced-repetition cadence.
+- If it is shaky or failed, record the exact failure mode, correct it, reproduce the solution closed-book, and schedule the next review using the failed/low-confidence cadence.
+
+| Review Date | Problems |
+| --- | --- |
+| 2026-08-17 | [27. Remove Element](https://leetcode.com/problems/remove-element/), [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) |
+| 2026-08-18 | [1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/), [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) |
+| 2026-08-19 | [3658. GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/), [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) |
+| 2026-08-20 | [3312. Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/), [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) |
+| 2026-08-21 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/), [682. Baseball Game](https://leetcode.com/problems/baseball-game/) |
+| 2026-08-24 | [155. Min Stack](https://leetcode.com/problems/min-stack/), [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) |
+| 2026-08-25 | [3310. Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/), [3345. Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) |
+| 2026-08-26 | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/), [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) |
+| 2026-08-27 | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/), [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) |
+
 ## Table of Contents
 
 - [DSA Plan](#dsa-plan)
@@ -108,6 +129,7 @@ Record:
   - [Weekly Targets](#weekly-targets)
   - [Problem Protocol](#problem-protocol)
   - [Review Protocol](#review-protocol)
+  - [Foundation Reset Review](#foundation-reset-review)
 - [Legend](#legend)
 - [DSA From Scratch](#dsa-from-scratch)
 - [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)
@@ -133,6 +155,7 @@ Record:
   - [Math](#math)
     - [Euclidean Algorithm](#euclidean-algorithm)
 - [Completed Problems](#completed-problems)
+- [Timed Assessments](#timed-assessments)
 - [Daily Problems](#daily-problems)
 - [Programming Skills Study Plan](#programming-skills-study-plan)
   - [Basic Implementation](#basic-implementation)
@@ -487,33 +510,41 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 
 | # | Completed | Difficulty | Pattern | Problem | Topic | Solution | Completed On | Confidence | Next Review | Reviews |
 | --- | :---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](problems/27_remove_element.py) | 2026-07-16 | - | - | - |
-| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 | - | - | - |
-| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 | - | - | - |
-| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 | - | - | - |
-| 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 | - | - | - |
-| 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 | - | - | - |
-| 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 | - | - | - |
-| 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 | - | - | - |
-| 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 | - | - | - |
-| 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - | - | - |
-| 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - | - | - |
-| 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High | - | - |
-| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-09 | 1 |
-| 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | Math / Enumeration | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
-| 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-09 | 0 |
-| 21 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List / Recursion | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | 2026-08-07 | Needs Review | 2026-08-10 | 0 |
-| 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | 2026-08-11 | 0 |
-| 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | 2026-08-11 | 0 |
+| 27 | ✔️ | 🟢 Easy | Two Pointers | [Remove Element](https://leetcode.com/problems/remove-element/) | Static Arrays | [27_remove_element.py](problems/27_remove_element.py) | 2026-07-16 | - | 2026-08-17 | 0 |
+| 485 | ✔️ | 🟢 Easy | Sliding Window | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Static Arrays | [485_max_consecutive_ones.py](problems/485_max_consecutive_ones.py) | 2026-07-16 | - | 2026-08-17 | 0 |
+| 1299 | ✔️ | 🟢 Easy | Suffix Maximum | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Static Arrays | [1299_replace_elements.py](problems/1299_replace_elements.py) | 2026-07-16 | - | 2026-08-18 | 0 |
+| 1929 | ✔️ | 🟢 Easy | Array Construction | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Dynamic Arrays | [1929_concatenation_of_array.py](problems/1929_concatenation_of_array.py) | 2026-07-16 | - | 2026-08-18 | 0 |
+| 3658 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/) | Math | [3658_gcd_of_odd_and_even_sums.py](problems/3658_gcd_of_odd_and_even_sums.py) | 2026-07-17 | - | 2026-08-19 | 0 |
+| 3867 | ✔️ | 🟡 Medium | Simulation / Euclidean Algorithm | [Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/) | Math / Sorting | [3867_sum_of_gcd_of_formed_pairs.py](problems/3867_sum_of_gcd_of_formed_pairs.py) | 2026-07-17 | - | 2026-08-19 | 0 |
+| 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | Math / Number Theory | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | 2026-07-17 | - | 2026-08-20 | 0 |
+| 1768 | ✔️ | 🟢 Easy | Two Pointers / String Building | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | String | [1768_merge_strings_alternately.py](study-plan-problems/1768_merge_strings_alternately.py) | 2026-07-17 | - | 2026-08-20 | 0 |
+| 20 | ✔️ | 🟢 Easy | Stack | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack / String | [20_valid_parentheses.py](problems/20_valid_parentheses.py) | 2026-07-17 | - | 2026-08-21 | 0 |
+| 682 | ✔️ | 🟢 Easy | Stack / Simulation | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Stack | [682_baseball_game.py](problems/682_baseball_game.py) | 2026-07-17 | - | 2026-08-21 | 0 |
+| 155 | ✔️ | 🟡 Medium | Stack / Design | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack / Design | [155_min_stack.py](problems/155_min_stack.py) | 2026-07-17 | - | 2026-08-24 | 0 |
+| 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Array / Math / Number Theory | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | 2026-07-18 | High | 2026-08-24 | 0 |
+| 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | Graph / DFS / BFS | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | 2026-08-05 | Needs Review | 2026-08-25 | 1 |
+| 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | Math / Enumeration | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | 2026-08-06 | Needs Review | 2026-08-25 | 0 |
+| 206 | 🟡 | 🟢 Easy | In-Place Linked List Manipulation | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List / Recursion | [206_reverse_linked_list.py](problems/206_reverse_linked_list.py) | 2026-08-06 | Needs Review | 2026-08-26 | 0 |
+| 21 | ✔️ | 🟢 Easy | Linked List Merge / Two Pointers | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List / Recursion | [21_merge_two_sorted_lists.py](problems/21_merge_two_sorted_lists.py) | 2026-08-07 | Needs Review | 2026-08-26 | 0 |
+| 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | 2026-08-27 | 0 |
+| 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | 2026-08-27 | 0 |
+
+## Timed Assessments
+
+Use one 90-minute assessment each week to measure interview readiness under realistic constraints. Work on unseen problems without notes or AI, narrate the approach aloud, and stop when time expires. Afterward, classify the failure rather than only recording the score.
+
+| Date | Status | Duration | Problems | Solved Independently | Observed | Main Failure | Next Adjustment |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-08-22 | Planned | 90 min | - | - | No | - | - |
 
 ## Daily Problems
 
 | Date | # | Completed | Difficulty | Pattern | Problem | Solution | Confidence | Next Review | Reviews |
 | --- | --- | :---: | --- | --- | --- | --- | --- | --- | --- |
-| 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - | - | - |
-| 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High | - | - |
-| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review | 2026-08-09 | 1 |
-| 2026-08-06 | 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | Needs Review | 2026-08-09 | 0 |
+| 2026-07-17 | 3312 | ❌ | 🔴 Hard | Counting / Inclusion-Exclusion / Prefix Sum | [Sorted GCD Pair Queries](https://leetcode.com/problems/sorted-gcd-pair-queries/) | [3312_sorted_gcd_pair_queries.py](daily-problems/3312_sorted_gcd_pair_queries.py) | - | 2026-08-20 | 0 |
+| 2026-07-18 | 1979 | ✔️ | 🟢 Easy | Math / Euclidean Algorithm | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | [1979_find_greatest_common_divisor_of_array.py](daily-problems/1979_find_greatest_common_divisor_of_array.py) | High | 2026-08-24 | 0 |
+| 2026-08-05 | 3310 | ❌ | 🟡 Medium | Graph / DFS | [Remove Methods From Project](https://leetcode.com/problems/remove-methods-from-project/) | [3310_remove_methods_from_project.py](daily-problems/3310_remove_methods_from_project.py) | Needs Review | 2026-08-25 | 1 |
+| 2026-08-06 | 3345 | ✔️ | 🟢 Easy | Enumeration / Digit Processing | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i/) | [3345_smallest_divisible_digit_product_i.py](daily-problems/3345_smallest_divisible_digit_product_i.py) | Needs Review | 2026-08-25 | 0 |
 
 ## Programming Skills Study Plan
 
