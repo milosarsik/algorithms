@@ -43,13 +43,14 @@ For each problem:
 4. Take a small hint if completely blocked.
 5. Study the solution only after a real attempt.
 6. Close it and reproduce it without looking.
-7. Repeat it after approximately 3 days and again after 1-2 weeks.
+7. Review it on days 1, 3, 7, 14, and 30 after the initial solve or attempt.
 
-For spaced repetition, use this cadence:
+For spaced repetition, use the fixed **1-3-7-14-30 day schedule** for all confidence levels:
 
-- Failed or low-confidence problem: review after 1 day, then 3 days, 7 days, 14 days, and 30 days.
-- Solved but shaky problem: review after 3 days, then 7 days, 14 days, and 30 days.
-- Easy/high-confidence problem: review after 7-14 days, then 30 days.
+- These are offsets from the initial solve or attempt date, not intervals added after each review. When restarting an older problem, use its restart date as the new anchor.
+- Keep the next scheduled date in `Next Review`; increment `Reviews` only when a review is actually completed.
+- Record confidence and failure modes separately. High confidence does not skip the day-1 review.
+- If a review is missed, leave it due until completed; do not count missed sessions as reviews.
 
 ### Review Protocol
 
@@ -109,7 +110,17 @@ Spaced repetition restarted on 2026-09-29 with **125. Valid Palindrome** as the 
 - A `-` date means the problem is outside the active review queue.
 - Add older problems back to the queue as they are revisited.
 - Attempt reviews from a blank editor, then record the outcome and schedule the next review using the cadence above.
-- Valid Palindrome's first review is **2026-10-06**, seven days after an independent, high-confidence solve.
+- Valid Palindrome's first review is **2026-09-30**, one day after the initial solve.
+
+Valid Palindrome review plan (anchor: 2026-09-29):
+
+| Review | Days After Solve | Date |
+| --- | --- | --- |
+| 1 | 1 | 2026-09-30 |
+| 2 | 3 | 2026-10-02 |
+| 3 | 7 | 2026-10-06 |
+| 4 | 14 | 2026-10-13 |
+| 5 | 30 | 2026-10-29 |
 
 ## Table of Contents
 
@@ -529,7 +540,7 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | - | 0 |
 | 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | - | 0 |
 | 1 | ✔️ | 🟢 Easy | Hash Map / Complement Lookup | [Two Sum](https://leetcode.com/problems/two-sum/) | Array / Hash Table | [1_two_sum.py](problems/1_two_sum.py) | 2026-09-18 | - | - | 0 |
-| 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-10-06 | 0 |
+| 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-09-30 | 0 |
 
 Two Sum: solved independently; the only reported mistake was missing references when renaming the map variable. Confidence is not yet recorded.
 
