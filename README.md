@@ -110,17 +110,17 @@ Spaced repetition restarted on 2026-09-29 with **125. Valid Palindrome** as the 
 - A `-` date means the problem is outside the active review queue.
 - Add older problems back to the queue as they are revisited.
 - Attempt reviews from a blank editor, then record the outcome and schedule the next review using the cadence above.
-- Valid Palindrome's first review is **2026-09-30**, one day after the initial solve.
+- Valid Palindrome's first review was completed on **2026-09-30**. Next review: **2026-10-02** (day 3).
 
 Valid Palindrome review plan (anchor: 2026-09-29):
 
-| Review | Days After Solve | Date |
-| --- | --- | --- |
-| 1 | 1 | 2026-09-30 |
-| 2 | 3 | 2026-10-02 |
-| 3 | 7 | 2026-10-06 |
-| 4 | 14 | 2026-10-13 |
-| 5 | 30 | 2026-10-29 |
+| Review | Days After Solve | Date | Status |
+| --- | --- | --- | --- |
+| 1 | 1 | 2026-09-30 | Completed; initially forgot `.lower()` |
+| 2 | 3 | 2026-10-02 | Scheduled |
+| 3 | 7 | 2026-10-06 | Scheduled |
+| 4 | 14 | 2026-10-13 | Scheduled |
+| 5 | 30 | 2026-10-29 | Scheduled |
 
 ## Table of Contents
 
@@ -540,7 +540,9 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 707 | ❌ | 🟡 Medium | Linked List / Design | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List / Design | [707_design_linked_list.py](problems/707_design_linked_list.py) | 2026-08-10 | Needs Review | - | 0 |
 | 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | - | 0 |
 | 1 | ✔️ | 🟢 Easy | Hash Map / Complement Lookup | [Two Sum](https://leetcode.com/problems/two-sum/) | Array / Hash Table | [1_two_sum.py](problems/1_two_sum.py) | 2026-09-18 | - | - | 0 |
-| 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-09-30 | 0 |
+| 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-10-02 | 1 |
+
+Valid Palindrome review (2026-09-30): completed, but initially forgot `.lower()`. Cue: case-insensitive comparisons require normalizing both characters; `"Aa"` should return `True`.
 
 Two Sum: solved independently; the only reported mistake was missing references when renaming the map variable. Confidence is not yet recorded.
 

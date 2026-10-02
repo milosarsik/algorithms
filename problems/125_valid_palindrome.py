@@ -5,6 +5,10 @@
 # The first version used more explicit code rather than shorthand.
 # That is not a correctness mistake; clarity matters more than brevity.
 
+# Review 1 (2026-09-30): completed, but initially forgot .lower().
+# Cue: normalize BOTH characters before a case-insensitive comparison.
+# Minimal check: "Aa" should return True, even though "A" != "a".
+
 # Algorithm in English:
 # 1. Place pointers at the first and last characters.
 # 2. Move each pointer past non-alphanumeric characters (spaces/punctuation).
@@ -46,4 +50,5 @@ print("mismatch:", is_palindrome("race a car"))  # False
 print("only punctuation:", is_palindrome(" .,! "))  # True
 print("empty string:", is_palindrome(""))  # True
 print("single character:", is_palindrome("a"))  # True
+print("case-insensitive pair:", is_palindrome("Aa"))  # True
 print("digits count too:", is_palindrome("0P"))  # False
