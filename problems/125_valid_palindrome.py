@@ -9,6 +9,8 @@
 # Cue: normalize BOTH characters before a case-insensitive comparison.
 # Minimal check: "Aa" should return True, even though "A" != "a".
 
+# Review 2 (recorded for 2026-10-02): completed.
+
 # Algorithm in English:
 # 1. Place pointers at the first and last characters.
 # 2. Move each pointer past non-alphanumeric characters (spaces/punctuation).
