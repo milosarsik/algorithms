@@ -10,6 +10,7 @@
 # Minimal check: "Aa" should return True, even though "A" != "a".
 
 # Review 2 (recorded for 2026-10-02): completed.
+# Review 3 (2026-10-06): successful; wrote the solution in about 30 seconds.
 
 # Algorithm in English:
 # 1. Place pointers at the first and last characters.
