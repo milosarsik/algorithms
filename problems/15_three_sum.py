@@ -40,30 +40,42 @@
 # The pointer scan itself uses O(1) extra space.
 # Output Space: O(k) for k unique triplets; total space is O(n + k).
 def three_sum(nums):
+    # Sort to enable two-pointer movement and group duplicate values together.
     nums.sort()
     result = []
     n = len(nums)
 
+    # Fix the first element, leaving at least two elements for the pair.
     for i in range(n - 2):
+        # Skip duplicate first values to avoid repeating the same triplets.
         if i > 0 and nums[i] == nums[i - 1]:
             continue
+        # If the first value is positive, every remaining value is positive too.
         if nums[i] > 0:
             break
 
+        # Search only after i so the three indices are distinct.
         left = i + 1
         right = n - 1
+        # Find a pair whose sum is -nums[i].
         while left < right:
             current_sum = nums[i] + nums[left] + nums[right]
             if current_sum < 0:
+                # Sum too small: try a larger value at the left pointer.
                 left += 1
             elif current_sum > 0:
+                # Sum too large: try a smaller value at the right pointer.
                 right -= 1
             else:
+                # Save the match before moving past duplicate values.
                 result.append([nums[i], nums[left], nums[right]])
+                # Skip repeated choices for the second element.
                 while left < right and nums[left] == nums[left + 1]:
                     left += 1
+                # Skip repeated choices for the third element.
                 while left < right and nums[right] == nums[right - 1]:
                     right -= 1
+                # Move both pointers inward to search for a new pair.
                 left += 1
                 right -= 1
 
