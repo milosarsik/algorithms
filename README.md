@@ -144,6 +144,7 @@ Valid Palindrome review plan (anchor: 2026-09-29):
 - [Patterns](#patterns)
   - [Hash Map / Complement Lookup](#hash-map--complement-lookup)
   - [Two Pointers](#two-pointers)
+    - [3Sum: Fix One Value, Search for Two](#3sum-fix-one-value-search-for-two)
   - [In-Place Linked List Manipulation](#in-place-linked-list-manipulation)
   - [Linked List Merge](#linked-list-merge)
   - [Simulation](#simulation)
@@ -392,6 +393,19 @@ Look for:
 
 For Valid Palindrome, skip non-alphanumeric characters with `isalnum()`, compare lowercase characters, and move inward. Keep `left < right` in both skip loops. Each pointer only moves in one direction, giving `O(n)` time and `O(1)` extra space without building a filtered string.
 
+#### 3Sum: Fix One Value, Search for Two
+
+Grokking 3Sum lesson studied on **2026-10-07**. Reference implementation: [15_three_sum.py](problems/15_three_sum.py).
+
+Sort the array, fix one value `nums[i]`, then use inward-moving pointers to find a pair summing to `-nums[i]`. If the total is too small, increase `left`; if too large, decrease `right`. When it is zero, save the triplet and move past repeated values before continuing.
+
+- Skip repeated fixed values to avoid repeating the same search; skip repeated left/right values after a match to avoid duplicate triplets.
+- Duplicate input values are allowed: `[-1, -1, 2]` is valid. The three indices must be distinct, enforced by `i < left < right`.
+- Stop when the fixed value is positive, since every remaining value is at least as large. Do not stop at zero: `[0, 0, 0]` is valid.
+- Time: `O(n^2)`, improving on the `O(n^3)` brute-force approach. Sorting takes `O(n log n)` and each fixed value requires at most one linear pointer scan.
+- Auxiliary space: `O(n)` worst case for Python's sorting workspace. The pointer scan uses `O(1)`; the output needs `O(k)` for `k` unique triplets, so total space is `O(n + k)`.
+- `nums.sort()` mutates the input; results are triplets of values, not indices.
+
 ### In-Place Linked List Manipulation
 
 Use in-place linked list manipulation when the input is a linked list and the task asks you to change node order or structure without creating a new list. Instead of copying nodes, rewire existing `next` pointers.
@@ -541,6 +555,9 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | - | 0 |
 | 1 | ✔️ | 🟢 Easy | Hash Map / Complement Lookup | [Two Sum](https://leetcode.com/problems/two-sum/) | Array / Hash Table | [1_two_sum.py](problems/1_two_sum.py) | 2026-09-18 | - | - | 0 |
 | 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-10-13 | 3 |
+| 15 | ❌ | 🟡 Medium | Sorting / Two Pointers | [3Sum](https://leetcode.com/problems/3sum/) | Array | [15_three_sum.py](problems/15_three_sum.py) | 2026-10-07 | Needs Review | 2026-10-08 | 0 |
+
+3Sum (2026-10-07): worked through the Grokking lesson and attempted the solution, but got stuck moving the left/right pointers inward and consulted the solution. Review cue: too small -> move left; too large -> move right; match -> save, skip duplicates, move both. Review dates: October 8, 10, 14, 21, and November 6 (days 1, 3, 7, 14, and 30).
 
 Valid Palindrome review (2026-09-30): completed, but initially forgot `.lower()`. Cue: case-insensitive comparisons require normalizing both characters; `"Aa"` should return `True`.
 
@@ -575,6 +592,7 @@ Use one 90-minute assessment each week to measure interview readiness under real
 
 | Trick | When To Use It | Example |
 | --- | --- | --- |
+| Skip duplicate choices in a sorted array | Skip repeated fixed values and repeated pointer values after a match to return unique triplets without a result set | [15. 3Sum](https://leetcode.com/problems/3sum/) |
 | Skip irrelevant characters at each pointer | Use `isalnum()` and compare with `lower()` for a case-insensitive palindrome check without allocating a filtered string | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) |
 | Look up the complement before inserting | When finding a pair, search previously seen values first to avoid using the same element twice | [1. Two Sum](https://leetcode.com/problems/two-sum/) |
 | Maintain a running total | When a stack/list changes over time but the final answer is the sum of remaining values | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) |
