@@ -555,9 +555,11 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1700 | ❌ | 🟢 Easy | Queue / Simulation / Counting | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Queue / Array | - | 2026-08-10 | Needs Review | - | 0 |
 | 1 | ✔️ | 🟢 Easy | Hash Map / Complement Lookup | [Two Sum](https://leetcode.com/problems/two-sum/) | Array / Hash Table | [1_two_sum.py](problems/1_two_sum.py) | 2026-09-18 | - | - | 0 |
 | 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-10-13 | 3 |
-| 15 | ❌ | 🟡 Medium | Sorting / Two Pointers | [3Sum](https://leetcode.com/problems/3sum/) | Array | [15_three_sum.py](problems/15_three_sum.py) | 2026-10-07 | Needs Review | 2026-10-08 | 0 |
+| 15 | ❌ | 🟡 Medium | Sorting / Two Pointers | [3Sum](https://leetcode.com/problems/3sum/) | Array | [15_three_sum.py](problems/15_three_sum.py) | 2026-10-07 | Needs Review | 2026-10-10 | 1 |
 
 3Sum (2026-10-07): worked through the Grokking lesson and attempted the solution, but got stuck moving the left/right pointers inward and consulted the solution. Review cue: too small -> move left; too large -> move right; match -> save, skip duplicates, move both. Review dates: October 8, 10, 14, 21, and November 6 (days 1, 3, 7, 14, and 30).
+
+3Sum review 1 (2026-10-08): still Needs Review. Used `n - 1` instead of `n - 2`, tried `>= 0` for early exit, missed duplicate first values and the pair-search `while` loop, misplaced pointer initialization, and questioned the final pointer moves. The annotated review version answers each point. Main cue: initialize once per fixed value, repeatedly search while `left < right`, then move past duplicate runs after a match. Next review: **2026-10-10** (day 3).
 
 Valid Palindrome review (2026-09-30): completed, but initially forgot `.lower()`. Cue: case-insensitive comparisons require normalizing both characters; `"Aa"` should return `True`.
 
