@@ -13,6 +13,10 @@
 #   changing only the other to a distinct value cannot give another zero sum.
 # - Keep left < right so the pair uses two distinct indices.
 
+# Review 1 (2026-10-08): still Needs Review. Questions concerned the outer-loop
+# bound, early exit, duplicate first values, pointer initialization, the missing
+# pair-search loop, and the final pointer moves. Annotated review version below.
+
 # Algorithm in English:
 # 1. Sort nums so moving left rightward increases the sum, and moving right
 #    leftward decreases it. This changes the original input list.
@@ -82,9 +86,85 @@ def three_sum(nums):
     return result
 
 
+# User's review version, normalized to a standalone function.
+# Time Complexity: O(n^2).
+# Auxiliary Space: O(n) for Python sorting; output adds O(k) for k triplets.
+def three_sum_review(nums):
+    nums.sort()
+    result = []
+    n = len(nums)
+
+    # My question: I had n - 1 instead of n - 2. What is the difference?
+    # Answer: i must leave TWO positions after it, so its last useful index is
+    # n - 3. range(n - 2) stops before n - 2. With n = 5, it visits 0, 1, 2.
+    # range(n - 1) also visits i = 3, where left == right == 4. The guarded
+    # while loop does nothing, so that extra iteration is redundant, not wrong.
+    for i in range(n - 2):
+        # My question: Why did >= fail a case?
+        # Answer: zero must remain eligible: [0, 0, 0] is a valid triplet.
+        # Only a POSITIVE first value makes every remaining triplet positive.
+        if nums[i] > 0:
+            break
+
+        # My note: missed case.
+        # Answer: skip a first value already used so we do not repeat triplets.
+        # For [-1, -1, 0, 1], fixing either -1 would produce [-1, 0, 1].
+        # i > 0 prevents comparing the first value with nums[-1].
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+
+        # My note: I had these one layer in instead of here.
+        # Answer: initialize once for EACH fixed i, before the pair-search loop.
+        # Putting them inside that loop resets its progress every iteration;
+        # putting them outside the for loop fails to restart the search for i.
+        left = i + 1
+        right = n - 1
+
+        # My note: completely missed this while loop.
+        # Answer: one fixed value may need many pair checks. Continue until the
+        # pointers meet. Without the loop, only the first pair is checked.
+        # For [-4, -1, 0, 1, 3], -4 + -1 + 3 is too small, but advancing left
+        # twice finds [-4, 1, 3]. Each iteration must recalculate the sum.
+        while left < right:
+            # Use current_sum instead of sum to avoid hiding Python's sum().
+            current_sum = nums[i] + nums[left] + nums[right]
+
+            if current_sum < 0:
+                left += 1
+            elif current_sum > 0:
+                right -= 1
+            else:
+                result.append([nums[i], nums[left], nums[right]])
+
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+
+                # My question: Why move inward after the duplicate while loops?
+                # Answer: those loops stop ON the last copy of each matched
+                # value. These final steps move PAST those values to a new pair.
+                # With [-2, 0, 0, 2, 2], a match at left=1/right=4 is followed
+                # by duplicate skips to left=2/right=3, still holding 0 and 2.
+                # The final moves cross the pointers and finish the search.
+                # With [-1, 0, 1], neither skip loop moves at all. Omitting
+                # these final steps would append the same triplet forever.
+                left += 1
+                right -= 1
+
+    return result
+
+
 print("mixed values:", three_sum([-1, 0, 1, 2, -1, -4]))  # [[-1, -1, 2], [-1, 0, 1]]
 print("repeated zeros:", three_sum([0, 0, 0, 0]))  # [[0, 0, 0]]
 print("repeated pair:", three_sum([-2, 0, 0, 2, 2]))  # [[-2, 0, 2]]
 print("no solution:", three_sum([0, 1, 1]))  # []
 print("positive values:", three_sum([1, 2, 3]))  # []
 print("fewer than three:", three_sum([0, 0]))  # []
+
+print("review - zeros allowed:", three_sum_review([0, 0, 0]))  # [[0, 0, 0]]
+print("review - repeated first value:", three_sum_review([-1, -1, 0, 1]))  # [[-1, 0, 1]]
+print("review - several pair checks:", three_sum_review([-4, -1, 0, 1, 3]))  # [[-4, 1, 3], [-1, 0, 1]]
+print("review - duplicate runs:", three_sum_review([-2, 0, 0, 2, 2]))  # [[-2, 0, 2]]
+print("review - no duplicate skips:", three_sum_review([-1, 0, 1]))  # [[-1, 0, 1]]
+print("review - fewer than three:", three_sum_review([0, 0]))  # []
