@@ -145,6 +145,7 @@ Valid Palindrome review plan (anchor: 2026-09-29):
   - [Hash Map / Complement Lookup](#hash-map--complement-lookup)
   - [Two Pointers](#two-pointers)
     - [3Sum: Fix One Value, Search for Two](#3sum-fix-one-value-search-for-two)
+    - [Fixed-Gap Pointers in a Linked List](#fixed-gap-pointers-in-a-linked-list)
   - [In-Place Linked List Manipulation](#in-place-linked-list-manipulation)
   - [Linked List Merge](#linked-list-merge)
   - [Simulation](#simulation)
@@ -406,6 +407,12 @@ Sort the array, fix one value `nums[i]`, then use inward-moving pointers to find
 - Auxiliary space: `O(n)` worst case for Python's sorting workspace. The pointer scan uses `O(1)`; the output needs `O(k)` for `k` unique triplets, so total space is `O(n + k)`.
 - `nums.sort()` mutates the input; results are triplets of values, not indices.
 
+#### Fixed-Gap Pointers in a Linked List
+
+Grokking practice on **2026-10-08**: [19. Remove Nth Node From End of List](problems/19_remove_nth_node_from_end_of_list.py). Keep two pointers a fixed distance apart to locate a position relative to the end without first counting the nodes.
+
+Start both at a dummy node. Advance `fast` by `n` links, then move both while `fast.next` exists. When `fast` reaches the tail, `slow` is just before the target; remove it with `slow.next = slow.next.next`. The dummy makes head removal use the same operation. An alternative advances `fast` by `n + 1` and loops while `fast` exists: pair the correct gap with its stopping condition. Both take `O(L)` time and `O(1)` extra space for a list of length `L`.
+
 ### In-Place Linked List Manipulation
 
 Use in-place linked list manipulation when the input is a linked list and the task asks you to change node order or structure without creating a new list. Instead of copying nodes, rewire existing `next` pointers.
@@ -556,6 +563,9 @@ For 3658, the first `n` odd numbers sum to `n * n`, and the first `n` even numbe
 | 1 | ✔️ | 🟢 Easy | Hash Map / Complement Lookup | [Two Sum](https://leetcode.com/problems/two-sum/) | Array / Hash Table | [1_two_sum.py](problems/1_two_sum.py) | 2026-09-18 | - | - | 0 |
 | 125 | ✔️ | 🟢 Easy | Two Pointers | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String | [125_valid_palindrome.py](problems/125_valid_palindrome.py) | 2026-09-29 | High | 2026-10-13 | 3 |
 | 15 | ❌ | 🟡 Medium | Sorting / Two Pointers | [3Sum](https://leetcode.com/problems/3sum/) | Array | [15_three_sum.py](problems/15_three_sum.py) | 2026-10-07 | Needs Review | 2026-10-10 | 1 |
+| 19 | ✔️ | 🟡 Medium | Two Pointers / Fixed Gap | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | [19_remove_nth_node_from_end_of_list.py](problems/19_remove_nth_node_from_end_of_list.py) | 2026-10-08 | High | 2026-10-09 | 0 |
+
+Remove Nth Node From End of List (2026-10-08): reported solving on their own after viewing Grokking's vertical sequence; the sequence guidance is recorded alongside the original code. Review dates: October 9, 11, 15, 22, and November 7 (days 1, 3, 7, 14, and 30).
 
 3Sum (2026-10-07): worked through the Grokking lesson and attempted the solution, but got stuck moving the left/right pointers inward and consulted the solution. Review cue: too small -> move left; too large -> move right; match -> save, skip duplicates, move both. Review dates: October 8, 10, 14, 21, and November 6 (days 1, 3, 7, 14, and 30).
 
@@ -594,6 +604,7 @@ Use one 90-minute assessment each week to measure interview readiness under real
 
 | Trick | When To Use It | Example |
 | --- | --- | --- |
+| Match the pointer gap to the stopping condition | From a dummy node, advance `n` then use `while fast.next`, or advance `n + 1` then use `while fast`, to stop slow before the removal target | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
 | Skip duplicate choices in a sorted array | Skip repeated fixed values and repeated pointer values after a match to return unique triplets without a result set | [15. 3Sum](https://leetcode.com/problems/3sum/) |
 | Skip irrelevant characters at each pointer | Use `isalnum()` and compare with `lower()` for a case-insensitive palindrome check without allocating a filtered string | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) |
 | Look up the complement before inserting | When finding a pair, search previously seen values first to avoid using the same element twice | [1. Two Sum](https://leetcode.com/problems/two-sum/) |
