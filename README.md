@@ -141,7 +141,9 @@ Valid Palindrome review plan (anchor: 2026-09-29):
   - [Linked Lists](#linked-lists)
     - [Singly Linked Lists](#singly-linked-lists)
     - [Doubly Linked Lists](#doubly-linked-lists)
+  - [Recursion](#recursion)
 - [Patterns](#patterns)
+  - [Recursive Decomposition](#recursive-decomposition)
   - [Hash Map / Complement Lookup](#hash-map--complement-lookup)
   - [Two Pointers](#two-pointers)
     - [3Sum: Fix One Value, Search for Two](#3sum-fix-one-value-search-for-two)
@@ -367,7 +369,29 @@ Notes: [doubly_linked_lists.py](notes/doubly_linked_lists.py)
 | ❌ | 🟡 Medium | Linked List / Design | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) | [707_design_linked_list.py](problems/707_design_linked_list.py) | Implement indexed get, insert, and delete operations |
 | ⬜ | 🟡 Medium | Doubly Linked List / Design | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) | - | Move backward and forward through history state |
 
+## Recursion
+
+Completed on **2026-11-04**: NeetCode Recursion (one branch: factorial; two branches: Fibonacci), plus the recursion section of *Grokking Algorithms* by Aditya Bhargava.
+
+Recursion solves a problem by calling the same function on a smaller input. Define a **base case** that returns without another call, then a **recursive case** that moves toward it. Each active call occupies a stack frame; when a call returns, its caller resumes and can combine the result.
+
+| Example | Base Case | Recursive Case | Time | Stack Space |
+| --- | --- | --- | --- | --- |
+| Factorial | `0! = 1` | `n * factorial(n - 1)` | O(n) | O(n) |
+| Fibonacci (naive) | `F(0) = 0`, `F(1) = 1` | `fibonacci(n - 1) + fibonacci(n - 2)` | O(2^n) upper bound | O(n) |
+| Countdown | Stop at `n <= 1` | Print, then call `countdown(n - 1)` | O(n) for positive n | O(n) |
+
+These introductory bounds treat arithmetic as constant time and count stack frames; Python's arbitrary-size integers add costs for large values. Naive Fibonacci repeats subproblems, so its total work grows exponentially, but its deepest active call chain is only linear. Memoization can avoid repeated calculations.
+
+The `greet`, `greet2`, and `bye` examples demonstrate the call stack with ordinary nested calls, not recursion. A function is recursive when it calls itself directly or through other functions. Keep `print` (displaying a value) separate from `return` (passing a result to the caller). Python also has a recursion-depth limit; even tail-recursive calls use stack space.
+
+Notes and runnable examples: [recursion.py](notes/recursion.py). Countdown's condition is `n <= 1` to match the notes and terminate for a starting value of zero.
+
 ## Patterns
+
+### Recursive Decomposition
+
+Look for a problem that can be expressed as smaller instances of itself. State the base case, choose a smaller input, and decide how the returned answers combine. Factorial has one smaller call; Fibonacci has two. To analyze complexity, count total work across calls for time and the maximum number of simultaneously active calls for stack space. See [recursion notes](notes/recursion.py).
 
 ### Hash Map / Complement Lookup
 
