@@ -142,6 +142,8 @@ Valid Palindrome review plan (anchor: 2026-09-29):
     - [Singly Linked Lists](#singly-linked-lists)
     - [Doubly Linked Lists](#doubly-linked-lists)
   - [Recursion](#recursion)
+  - [Sorting](#sorting)
+    - [Insertion Sort](#insertion-sort)
 - [Patterns](#patterns)
   - [Recursive Decomposition](#recursive-decomposition)
   - [Hash Map / Complement Lookup](#hash-map--complement-lookup)
@@ -386,6 +388,27 @@ These introductory bounds treat arithmetic as constant time and count stack fram
 The `greet`, `greet2`, and `bye` examples demonstrate the call stack with ordinary nested calls, not recursion. A function is recursive when it calls itself directly or through other functions. Keep `print` (displaying a value) separate from `return` (passing a result to the caller). Python also has a recursion-depth limit; even tail-recursive calls use stack space.
 
 Notes and runnable examples: [recursion.py](notes/recursion.py). Countdown's condition is `n <= 1` to match the notes and terminate for a starting value of zero.
+
+## Sorting
+
+### Insertion Sort
+
+Completed on **2026-11-05**: NeetCode Insertion Sort lesson and a self-written swap-based implementation.
+
+Build a sorted prefix from left to right. The first element is already sorted on its own. For each index `i` starting at `1`, set `j = i - 1` and swap the new element leftward while `arr[j + 1] < arr[j]`. Decrease `j` after each swap; stop at the beginning or when the left neighbor is no larger. After each outer iteration, positions `0` through `i` are sorted.
+
+The algorithm is **in place** and **stable**: strict `<` never swaps equal values, preserving their original relative order. For example, labeled equal values `[7a, 3, 7b]` become `[3, 7a, 7b]`. Using `<=` would lose that guarantee. Values can be any consistently comparable type.
+
+| Case | Time Complexity | Why |
+| --- | --- | --- |
+| Best | O(n) | Already sorted: one failed inner-loop condition per outer iteration, no swaps |
+| Average | O(n^2) | Random order typically requires quadratic comparisons and swaps |
+| Worst | O(n^2) | Reverse-sorted distinct values require `1 + 2 + ... + (n - 1)` swaps |
+| Extra space | O(1) | Only indices and a temporary swap variable; no copied subarrays |
+
+Useful for small or nearly sorted inputs. Keep `j >= 0` before indexing, and remember that the inserted value moves to `j + 1` as `j` decreases; it does not stay at index `i`. The implementation returns the same list it mutates.
+
+Notes and runnable examples: [insertion_sort.py](notes/insertion_sort.py).
 
 ## Patterns
 
